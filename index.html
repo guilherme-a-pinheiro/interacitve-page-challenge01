@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive rating component</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <div class="star-border"><img src="/images/icon-star.svg" alt=""></div>
+
+    <h1>How did we do?</h1>
+
+    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our
+      offering!</p>
+
+    <ul>
+      <li><button class="buttons">1</button></li>
+      <li><button class="buttons">2</button></li>
+      <li><button class="buttons">3</button></li>
+      <li><button class="buttons">4</button></li>
+      <li><button class="buttons">5</button></li>
+    </ul>
+
+    <button class="submit-button" id="submit">SUBMIT</button>
+  </div>
+
+  <div class="thanks hide">
+    <div class="img"><img src="/images/illustration-thank-you.svg" alt=""></div>
+
+    <div class="p">
+      <div class="border-p">
+        <p>You selected <span id="chosen"></span> out of 5</p>
+      </div>
+    </div>
+
+    <h1>Thank you!</h1>
+
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in
+      touch!</p>
+  </div>
+  <script>
+    const mainContainer = document.querySelector(".main")
+    const thanks = document.querySelector('.thanks')
+    const submitButton = document.getElementById('submit')
+    const options = document.querySelectorAll('.buttons') // rate
+    const chosen = document.getElementById('chosen') // rating
+    
+    options.forEach((option) => {
+    option.addEventListener("click", () => {
+      chosen.innerHTML = option.innerHTML
+      })
+    })
+
+    submitButton.addEventListener("click", () => {
+      console.log(chosen.innerHTML)
+      if (chosen.innerHTML == "") {
+        window.alert('*Please, select a number to continue*')
+      } else {
+        thanks.style.display = "block"
+        mainContainer.style.display = "none"
+      }
+    })
+
+  
+    
+  </script>
+</body>
+
+
+</html>
