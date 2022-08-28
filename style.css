@@ -151,7 +151,7 @@ body {
   background: var(--dark-blue-color);
   width: 160px;
   position: relative;
-  left: 20px;
+  left: 80px;
   border-radius: 25px;
   color: var(--orange-color);
 }
@@ -167,5 +167,8 @@ body {
 @media(max-width: 375px) {
   .main, .thanks {
     width: 275px;
+  }
+  .border-p p {
+    left: 20px
   }
 }
