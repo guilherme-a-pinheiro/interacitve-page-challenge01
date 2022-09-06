@@ -29,8 +29,7 @@ body {
   display: none;
 }
 
-.main {
-  display: block;
+.layout {
   height: 400px;
   width: 400px;
   position: absolute;
@@ -39,6 +38,10 @@ body {
   transform: translate(-50%, -50%);
   background-color: var(--very-dark-blue-color);
   border-radius: 30px;
+}
+
+.main {
+  display: block;
   padding: 30px 40px;
 }
 
@@ -64,13 +67,13 @@ body {
   font-size: 17px;
   font-weight: 400px;
   text-align: left;
-  color: var(--light-grey-color)
+  color: var(--light-grey-color);
 }
 
 .selects {
- display: flex;
- justify-content: space-between;
- padding: 20px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0 50px 0;
 }
 
 .main ul {
@@ -98,12 +101,12 @@ body {
 
 .main ul li button:hover {
   background: var(--orange-color);
-  color: var(--white-color)
+  color: var(--white-color);
 }
 
 .main ul li button:focus {
   background: var(--light-grey-color);
-  color: var(--white-color)
+  color: var(--white-color);
 }
 
 
@@ -119,19 +122,10 @@ body {
 
 .main .submit-button:hover {
   background: var(--white-color);
-  color: var(--orange-color)
+  color: var(--orange-color);
 }
 
 .thanks {
-  display: none;
-  height: 400px;
-  width: 400px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--very-dark-blue-color);
-  border-radius: 30px;
   padding: 45px 40px 30px 40px;
   text-align: center;
 }
@@ -148,16 +142,17 @@ body {
 }
 
 .border-p p {
-  background: var(--dark-blue-color);
-  width: 160px;
   position: relative;
+  width: 160px;
   left: 80px;
   border-radius: 25px;
+  background: var(--dark-blue-color);
   color: var(--orange-color);
 }
 
 .thanks h1 {
-  padding: 0
+  padding: 0;
+  margin-top: 10px;
 }
 
 .thanks p {
@@ -169,6 +164,6 @@ body {
     width: 275px;
   }
   .border-p p {
-    left: 20px
+    left: 20px;
   }
 }
